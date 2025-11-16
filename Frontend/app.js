@@ -1,4 +1,4 @@
-const apiUrl = "https://clotheswear.onrender.com";
+const apiUrl = "localhost:3000";
 
 let allProducts = [];
 let selectedCategory = "all";
