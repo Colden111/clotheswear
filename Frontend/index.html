@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geyim Mağazası</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1> Fashion Store</h1>
+            <nav>
+                <a href="index.html">Ana Səhifə</a>
+                <a href="login.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <input type="text" id="searchInput" placeholder="Məhsul axtar...">
+
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Hamısı</button>
+                <button class="category-btn" data-category="Kişi">Kişi</button>
+                <button class="category-btn" data-category="Qadın">Qadın</button>
+                <button class="category-btn" data-category="Uşaq">Uşaq</button>
+            </div>
+        </section>
+
+        <section class="products" id="productsContainer">
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        getProducts();
+
+        document.getElementById('searchInput').addEventListener('input', searchProduct);
+
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                selectCategory(this.dataset.category);
+            });
+        });
+    </script>
+</body>
+
+</html>
