@@ -37,9 +37,14 @@ const showProducts = (products) => {
                 <div class="price-wrapper">
                   <div class="product-price">${p.price} AZN</div>
                 </div>
-                <button class="btn cta" onclick="addToCart(${
-                  p.id
-                })">Səbətə at</button>
+                <div class="product-actions">
+                  <button class="btn-ghost quickview-btn" onclick="openQuickView(${
+                    p.id
+                  })">Tez Bax</button>
+                  <button class="btn cta" onclick="addToCart(${
+                    p.id
+                  })">Səbətə at</button>
+                </div>
             </div>
         </div>
     `
@@ -215,8 +220,67 @@ const deleteProduct = (id) => {
   }
 };
 
-const addToCart = (id) => {
+function addToCart(id) {
   const product = allProducts.find((p) => p.id === id);
   if (!product) return alert("Məhsul tapılmadı");
   alert(`${product.name} səbətə əlavə edildi.`);
-};
+}
+
+/* Quick View modal */
+function openQuickView(id) {
+  const p = allProducts.find((x) => x.id === id);
+  if (!p) return;
+
+  const modal = document.getElementById("quickViewModal");
+  modal.querySelector(".modal-image").src = p.image;
+  modal.querySelector(".modal-image").alt = p.name;
+  modal.querySelector(".modal-name").textContent = p.name;
+  modal.querySelector(".modal-category").textContent = p.category;
+  modal.querySelector(".modal-desc").textContent = p.description;
+  modal.querySelector(".modal-sizes").innerHTML = p.sizes
+    .map((s) => `<span class="size-badge">${s}</span>`)
+    .join("");
+  modal.querySelector(".modal-price").textContent = `${p.price} AZN`;
+
+  const modalAdd = document.getElementById("modalAddToCart");
+  modalAdd.onclick = function () {
+    addToCart(p.id);
+    closeQuickView();
+  };
+
+  modal.classList.remove("hidden");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closeQuickView() {
+  const modal = document.getElementById("quickViewModal");
+  modal.classList.add("hidden");
+  modal.setAttribute("aria-hidden", "true");
+}
+
+/* Sorting */
+function sortProducts(sortType) {
+  let sorted = [...allProducts];
+  if (sortType === "price-asc") {
+    sorted.sort((a, b) => Number(a.price) - Number(b.price));
+  } else if (sortType === "price-desc") {
+    sorted.sort((a, b) => Number(b.price) - Number(a.price));
+  } else if (sortType === "newest") {
+    sorted.sort((a, b) => Number(b.id) - Number(a.id));
+  }
+
+  // apply category/search filters then show
+  const searchText = (document.getElementById("searchInput") || {}).value || "";
+  if (selectedCategory !== "all") {
+    sorted = sorted.filter((p) => p.category === selectedCategory);
+  }
+  if (searchText) {
+    const low = searchText.toLowerCase();
+    sorted = sorted.filter(
+      (p) =>
+        p.name.toLowerCase().includes(low) ||
+        p.description.toLowerCase().includes(low)
+    );
+  }
+  showProducts(sorted);
+}

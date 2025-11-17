@@ -109,7 +109,7 @@ header nav a:hover {
 .filters {
     background: white;
     padding: 2rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -120,13 +120,24 @@ header nav a:hover {
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    margin-bottom: 1rem;
     transition: border-color 0.3s;
+    padding-bottom: 10px;
 }
 
 .filters input:focus {
     outline: none;
     border-color: #667eea;
+}
+
+.filters select {
+    width: 100%;
+    padding: 0.9rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
 }
 
 .categories {
@@ -259,6 +270,13 @@ header nav a:hover {
     transform: translateY(0);
 }
 
+/* Ensure CTA inside product-info isn't absolutely positioned and displays with actions */
+.product-info .btn.cta {
+    position: static;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 .btn.cta {
     background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
     padding: 0.6rem 1rem;
@@ -272,6 +290,35 @@ header nav a:hover {
 
 .btn.cta:hover {
     transform: translateY(-2px);
+}
+
+/* Product actions - appear on hover */
+.product-info .product-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.25s ease;
+}
+
+.product-card:hover .product-info .product-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: var(--muted);
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+}
+
+.btn-ghost:hover {
+    background: #fff;
+    color: var(--accent-1);
+    border-color: var(--accent-1);
 }
 
 .product-card .ribbon {
@@ -304,6 +351,41 @@ header nav a:hover {
 
 .product-card:hover {
     animation: float 0.6s ease-in-out;
+}
+
+/* HERO */
+.hero {
+    margin: 2rem 0;
+    border-radius: 12px;
+    height: 360px;
+    background-image: linear-gradient(180deg, rgba(102, 126, 234, 0.45), rgba(118, 75, 162, 0.4)), url('https://images.unsplash.com/photo-1520975917778-2f5b9d4b5d5b?w=1600');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.hero-content {
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.hero-content p {
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-cta {
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
 }
 
 /* LOGIN */
@@ -474,4 +556,53 @@ th {
 .btn-edit:hover,
 .btn-delete:hover {
     opacity: 0.8;
+}
+
+/* Quick View Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    width: min(900px, 94%);
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.modal-image {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal-info {
+    width: 52%;
+}
+
+.modal-close {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.modal-actions {
+    margin-top: 1rem;
 }

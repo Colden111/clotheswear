@@ -18,10 +18,25 @@
             </nav>
         </div>
     </header>
+    </header>
 
     <main class="container">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover the latest trends</h2>
+                <p>From casual essentials to premium statement pieces — upgrade your wardrobe.</p>
+                <a class="btn hero-cta" href="#productsContainer">Səbətə bax</a>
+            </div>
+        </section>
         <section class="filters">
             <input type="text" id="searchInput" placeholder="Məhsul axtar...">
+            <select id="sortSelect" aria-label="Sort məhsullar">
+                <option value="none">Sırala</option>
+                <option value="price-asc">Qiymət: Aşağıdan yuxarı</option>
+                <option value="price-desc">Qiymət: Yuxarıdan aşağı</option>
+                <option value="newest">Yeni məhsullar</option>
+            </select>
 
             <div class="categories">
                 <button class="category-btn active" data-category="all">Hamısı</button>
@@ -35,6 +50,26 @@
         </section>
     </main>
 
+    <!-- Quick view modal -->
+    <div id="quickViewModal" class="modal hidden" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Bağla" onclick="closeQuickView()">×</button>
+            <div class="modal-body">
+                <img class="modal-image" src="" alt="">
+                <div class="modal-info">
+                    <h3 class="modal-name"></h3>
+                    <div class="modal-category"></div>
+                    <p class="modal-desc"></p>
+                    <div class="modal-sizes"></div>
+                    <div class="modal-price"></div>
+                    <div class="modal-actions">
+                        <button class="btn" id="modalAddToCart">Səbətə at</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
     <script>
@@ -46,6 +81,26 @@
             btn.addEventListener('click', function () {
                 selectCategory(this.dataset.category);
             });
+        });
+
+        // Sort
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => {
+                sortProducts(e.target.value);
+            });
+        }
+
+        // Quick view modal: close on overlay click and ESC
+        const quickModal = document.getElementById('quickViewModal');
+        if (quickModal) {
+            quickModal.addEventListener('click', (e) => {
+                if (e.target === quickModal) closeQuickView();
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeQuickView();
         });
     </script>
 </body>
