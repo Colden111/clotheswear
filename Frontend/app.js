@@ -1,4 +1,4 @@
-const apiUrl = "localhost:3000";
+const apiUrl = "http://localhost:3000";
 
 let allProducts = [];
 let selectedCategory = "all";
@@ -77,7 +77,7 @@ const checkLogin = () => {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  if (username === "admin" && password === "admin123") {
+  if (username === "murad" && password === "murad123") {
     localStorage.setItem("adminLogin", "yes");
     alert("Giriş uğurlu!");
     window.location.href = "admin.html";
