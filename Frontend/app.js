@@ -34,7 +34,12 @@ const showProducts = (products) => {
                       .map((size) => `<span class="size-badge">${size}</span>`)
                       .join("")}
                 </div>
-                <div class="product-price">${p.price} AZN</div>
+                <div class="price-wrapper">
+                  <div class="product-price">${p.price} AZN</div>
+                </div>
+                <button class="btn cta" onclick="addToCart(${
+                  p.id
+                })">Səbətə at</button>
             </div>
         </div>
     `
@@ -77,7 +82,7 @@ const checkLogin = () => {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  if (username === "murad" && password === "murad123") {
+  if (username === "admin" && password === "admin123") {
     localStorage.setItem("adminLogin", "yes");
     alert("Giriş uğurlu!");
     window.location.href = "admin.html";
@@ -208,4 +213,10 @@ const deleteProduct = (id) => {
       getAdminProducts();
     });
   }
+};
+
+const addToCart = (id) => {
+  const product = allProducts.find((p) => p.id === id);
+  if (!product) return alert("Məhsul tapılmadı");
+  alert(`${product.name} səbətə əlavə edildi.`);
 };

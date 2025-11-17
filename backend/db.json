@@ -1,13 +1,18 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "Klassik Kişi Köynəyi",
       "category": "Kişi",
       "price": "45",
       "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500",
       "description": "Yüksək keyfiyyətli pambıq materialdan hazırlanmış klassik köynək",
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "id": 1
     },
     {
       "id": 3,
@@ -16,7 +21,12 @@
       "price": "65",
       "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500",
       "description": "Modern kəsim, davamlı denim material",
-      "sizes": ["30", "32", "34", "36"]
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
     },
     {
       "id": 4,
@@ -25,7 +35,11 @@
       "price": "25",
       "image": "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=500",
       "description": "Rəngarəng və rahat, uşaqlar üçün mükəmməl",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 5,
@@ -34,7 +48,11 @@
       "price": "85",
       "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500",
       "description": "Zərif axşam paltarı, xüsusi günlər üçün",
-      "sizes": ["S", "M", "L"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "id": 6,
@@ -43,7 +61,11 @@
       "price": "55",
       "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500",
       "description": "İsti və keyfiyyətli, qış ayları üçün",
-      "sizes": ["M", "L", "XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 7,
@@ -52,7 +74,12 @@
       "price": "50",
       "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500",
       "description": "Rahat kəsim, gündəlik istifadə üçün",
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 8,
@@ -61,7 +88,11 @@
       "price": "40",
       "image": "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=500",
       "description": "Sevimli dizayn, uşaqlar çox sevir",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 9,
@@ -70,7 +101,12 @@
       "price": "120",
       "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
       "description": "Qış üçün isti və zərif jaket",
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 10,
@@ -79,7 +115,12 @@
       "price": "40",
       "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500",
       "description": "İdman və gündəlik geyim üçün rahat şalvar",
-      "sizes": ["M", "L", "XL", "XXL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
     },
     {
       "id": 11,
@@ -88,7 +129,11 @@
       "price": "45",
       "image": "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=500",
       "description": "Qısa və zərif yubka, yay üçün ideal",
-      "sizes": ["S", "M", "L"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "id": 12,
@@ -97,7 +142,11 @@
       "price": "30",
       "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500",
       "description": "Rahat və davamlı uşaq şalvarı",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 13,
@@ -106,7 +155,11 @@
       "price": "150",
       "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=500",
       "description": "Klassik qış paltosu, isti və stillli",
-      "sizes": ["M", "L", "XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 14,
@@ -115,7 +168,12 @@
       "price": "38",
       "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500",
       "description": "Yüngül və rahat yay tunikası",
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 15,
@@ -124,7 +182,11 @@
       "price": "28",
       "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=500",
       "description": "Rəngli və şən uşaq köynəyi",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 16,
@@ -133,7 +195,11 @@
       "price": "35",
       "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500",
       "description": "Yay üçün rahat və sərin şort",
-      "sizes": ["M", "L", "XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 17,
@@ -142,7 +208,11 @@
       "price": "48",
       "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500",
       "description": "Yumşaq və isti qadın kazakı",
-      "sizes": ["S", "M", "L"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "id": 18,
@@ -151,7 +221,11 @@
       "price": "55",
       "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=500",
       "description": "Uşaqlar üçün isti və rəngli jaket",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 19,
@@ -160,7 +234,11 @@
       "price": "42",
       "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=500",
       "description": "Klassik polo köynək, casual üçün ideal",
-      "sizes": ["M", "L", "XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 20,
@@ -169,7 +247,11 @@
       "price": "25",
       "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
       "description": "Dəri kəmər, hər paltar üçün uyğun",
-      "sizes": ["S", "M", "L"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "id": 21,
@@ -178,7 +260,11 @@
       "price": "35",
       "image": "https://images.unsplash.com/photo-1519241047957-be31d7379a5d?w=500",
       "description": "Yumşaq və rahat uşaq sviteri",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 22,
@@ -187,7 +273,11 @@
       "price": "70",
       "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=500",
       "description": "Klassik vest, kostyum üçün",
-      "sizes": ["M", "L", "XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 23,
@@ -196,7 +286,11 @@
       "price": "75",
       "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=500",
       "description": "Müasir və rahat kombinezon",
-      "sizes": ["S", "M", "L"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "id": 24,
@@ -205,7 +299,11 @@
       "price": "22",
       "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500",
       "description": "Yay üçün rahat uşaq şortu",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 25,
@@ -214,7 +312,12 @@
       "price": "58",
       "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500",
       "description": "Rahat kapşonlu sviter",
-      "sizes": ["M", "L", "XL", "XXL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
     },
     {
       "id": 26,
@@ -223,7 +326,12 @@
       "price": "40",
       "image": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500",
       "description": "Zərif və yüngül bluza",
-      "sizes": ["S", "M", "L", "XL"]
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 27,
@@ -232,7 +340,11 @@
       "price": "45",
       "image": "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=500",
       "description": "İki parçalı uşaq dəsti",
-      "sizes": ["XS", "S", "M"]
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ]
     },
     {
       "id": 28,
@@ -241,7 +353,11 @@
       "price": "180",
       "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
       "description": "Premium keyfiyyətli dəri jaket",
-      "sizes": ["M", "L", "XL"]
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ]
     },
     {
       "id": 29,
@@ -250,7 +366,11 @@
       "price": "28",
       "image": "https://images.unsplash.com/photo-1627225925683-1da7021732ea?w=500",
       "description": "Sadə və rahat mayka",
-      "sizes": ["S", "M", "L"]
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
     },
     {
       "id": 30,
@@ -259,7 +379,12 @@
       "price": "50",
       "image": "https://images.unsplash.com/photo-1560072810-1cffb09faf0f?w=500",
       "description": "Rahat və davamlı uşaq ayaqqabısı",
-      "sizes": ["28", "30", "32", "34"]
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34"
+      ]
     }
   ]
 }
